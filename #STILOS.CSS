@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Nerko+One&family=Staatliches&display=swap');
+body{
+	font-family: 'Nerko One', cursive;
+	background: url(imagenes/fondo.jpg);
+	min-height:100vh;
+	width: 100%;
+	box-sizing: border-box;
+	line-height: 1.8em;
+	margin: 0;
+	color: white;
+}
+
+.navbar{
+	font-size: 20px;
+	font-weight: 600;
+	color: #9FFF36;
+}
+.contenedor{
+	width: 100%;
+	padding: 20px 0;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider-exterior{
+	position: relative;
+}
+.slider-interior{
+	position: relative;
+	padding: 5px;
+	border: #666 solid 1px;
+}
+.slider-interior img{
+	display: none;
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+}
+@media screen and (min-width: 800px) {
+	.slider-interior img{
+		display: none;
+		width: 800px;
+		height: 500px;
+		object-fit: cover;
+	}
+  }
+.slider-interior img.activa{
+	display: inline-block;
+}
+
+.anterior{
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	left: 5px;
+	z-index: 100;
+	width: 50px;
+}
+.siguiente{
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	right: 5px;
+	z-index: 100;
+	width: 50px;
+}
+
+/*Pagina juegos*/
+
+/*body*/
+#juego{
+background: rgb(96,179,57);
+background: linear-gradient(0deg, rgba(96,179,57,1) 2%, rgba(0,135,0,1) 81%);
+background-repeat: no-repeat;
+}
+
+#sector{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 10px;
+}
+
+
+.botones{
+	width: 180px;
+	height: 180px;
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #c0ffc4;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 10px;
+}
+.botones:hover{
+	cursor: pointer;
+}
+
+#seccion2{
+	background-color: #008000;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.estadisticas{
+	border: 1px solid white;
+	height:5rem;
+	border-radius: 8px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+.reiniciar{
+	border: 1px solid white;
+	border-radius: 8px;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	transition: .3s all;
+}
+.reiniciar:hover{
+	background-color: rgb(128, 41, 0);
+}
+
+@media screen and (max-width: 800px) {
+	.botones{
+		width: 80px;
+		height: 80px;
+		background-color: #c0ffc4;
+
+	}
+	#sector{
+		display: flex;
+		flex-direction: column;
+	}
+	#seccion2{
+		border-radius: 10px;
+		width: 100%;
+	}
+}
